@@ -1,0 +1,22 @@
+//-
+	Главная странциа
+	Перечень курсов
+
+
+mixin cources_entry( args )
+	.col-xs-12.col-sm-6.col-md-3.col-lg-3
+		.cources__entry.entry( style="background-color: "+args.color )
+			a.thumbnail( href="#" ): img.wp-post-thumbnail.lazy( src="#", data-src=args.thumbnail, alt=args.title )
+			h3.title #{args.title}
+			p.excerpt #{args.excerpt}
+			a.permalink( href="#" ) Подробней
+
+
+
+section.section.cources#cources
+	h2 Курсы
+	.container: .row.center-xs
+		+cources_entry( { color: '#4db2f6', thumbnail: src.img+'cources/adjustment.png', title: 'Lorem ipsum dolor', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod' } )
+		+cources_entry( { color: '#c04af8', thumbnail: src.img+'cources/play.png', title: 'Ut enim ad minim', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod' } )
+		+cources_entry( { color: '#817eff', thumbnail: src.img+'cources/treble-clef.png', title: 'Duis aute irure dolor', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod' } )
+		+cources_entry( { color: '#f74670', thumbnail: src.img+'cources/vynil.png', title: 'Officia deserunt mollit', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod' } )

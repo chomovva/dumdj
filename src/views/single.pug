@@ -1,0 +1,16 @@
+extend layout/_index
+
+block variables
+	- page.type = 'single';
+	- page.title = 'Шаблон страницы поста / записи блока / новости';
+
+
+block main
+	.container: .row
+		.col-xs-12.col-sm-12.col-md-8.col-lg-8
+			include components/_pageheader
+			include components/_breadcrumbs
+			include components/_content
+			include components/_pager
+			include components/_comments
+		.col-xs-12.col-sm-12.col-md-4.col-lg-4: include asides/_right

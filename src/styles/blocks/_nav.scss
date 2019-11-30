@@ -1,0 +1,36 @@
+//
+//	Навигация в шапке сайта
+//
+//
+
+
+.nav {
+
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.list {
+		li {
+			display: inline-block;
+		}
+		a {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+			padding: 0.2em 0.5em;
+			background-color: transparent;
+			border: 1px solid transparent;
+			// font-weight: bold;
+			&:hover {
+				@extend %box-shadow;
+				background-color: $brand-primary;
+				border: 1px solid darken( $brand-primary, 5% );
+				color: #fff;
+			}
+		}
+	}
+
+}

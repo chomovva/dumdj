@@ -1,0 +1,24 @@
+//
+//
+//
+//
+
+
+
+.archive {
+
+	.entry {
+		@extend %box-shadow;
+		margin: 0 auto 2em auto;
+		padding: 1em;
+		background-color: #fff;
+		border: 1px solid $border-color;
+	}
+
+	&__entry {
+		.title a {
+			text-decoration: none;
+		}
+	}
+
+}

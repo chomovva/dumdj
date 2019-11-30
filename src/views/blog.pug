@@ -1,0 +1,27 @@
+extend layout/_index
+
+
+block variables
+	- page.type = 'index category archive';
+	- page.title = 'Блог / Архив / Категория';
+
+
+mixin blog_entry( args )
+	.archive__entry.entry
+		a.thumbnail( href="#" ): img.wp-post-thumbnail.lazy( src="#", data-src=args.thumbnail )
+		h2.title: a( href="#" ) #{args.title}
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, dicta sequi porro in veritatis animi perferendis quod placeat qui amet quia accusamus iste optio, quos facere similique repellat officia totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, dicta sequi porro in veritatis animi perferendis quod placeat qui amet quia accusamus iste optio, quos facere similique repellat officia totam.
+
+
+block main
+	.container: .row
+		.col-xs-12.col-sm-12.col-md-8.col-lg-8
+			include components/_pageheader
+			include components/_breadcrumbs
+			+blog_entry( { thumbnail: src.img+'gallery/01-large.jpg', title: 'Запись блога №1' } )
+			+blog_entry( { thumbnail: src.img+'gallery/02-large.jpg', title: 'Запись блога №2' } )
+			+blog_entry( { thumbnail: src.img+'gallery/03-large.jpg', title: 'Запись блога №3' } )
+			+blog_entry( { thumbnail: src.img+'gallery/04-large.jpg', title: 'Запись блога №4' } )
+			+blog_entry( { thumbnail: src.img+'gallery/05-large.jpg', title: 'Запись блога №5' } )
+			include components/_pagination
+		.col-xs-12.col-sm-12.col-md-4.col-lg-4: include asides/_right

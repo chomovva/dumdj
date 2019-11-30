@@ -1,0 +1,21 @@
+//-
+	Секция "Успехи"
+	Главная страница
+
+
+
+mixin progress_entry( args )
+	.col-xs-6.col-sm-3.col-md-3.col-lg-3
+		.progress__item.item
+			.percent #{args.percent}
+			.title #{args.title}
+
+
+section.section.progress.lazy#progress( data-src=src.img+'progress/bg.jpg' )
+	.container
+		h2 Наши успехи
+		.row
+			+progress_entry( { 'title': 'Обучено с нуля', 'percent': '200' } )
+			+progress_entry( { 'title': 'Филиалов', 'percent': '2' } )
+			+progress_entry( { 'title': 'Компаний партнеров', 'percent': '20' } )
+			+progress_entry( { 'title': 'Трудоустроено', 'percent': '150' } )

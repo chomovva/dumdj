@@ -1,0 +1,25 @@
+//
+// Логотип сайта
+//
+
+
+
+.bloginfo {
+
+	padding: 0.5em;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 200ms, color 200ms;	
+
+	&:hover { text-decoration: none; }
+
+	&__logo { @extend %brand-logo; }
+
+	.logo path { fill: $brand-primary; }
+
+	&__name { @extend %brand-name; }
+
+}

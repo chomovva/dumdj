@@ -1,0 +1,39 @@
+//-
+//- Главная страница
+//- Секция "Преподаватели"
+
+
+.teachers {
+	
+	.entry {
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		margin: 15px auto;
+		padding: 1em;
+		border: 3px solid transparent;
+		transition: border-color 250ms;
+		min-height: 360px;
+		&:hover {
+			text-decoration: none;
+			border: 3px solid $brand-primary;
+		}
+	}
+
+	&__entry {
+		.wp-post-thumbnail {
+			@extend %box-shadow;
+			display: block;
+			margin: 15px auto;
+			width: 150px;
+			height: 150px;
+		}
+		.title {
+			color: $brand-default;
+		}
+		.excerpt {
+			color: $brand-default;
+		}
+	}
+
+}

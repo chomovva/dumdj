@@ -1,0 +1,15 @@
+extend layout/_index
+
+
+block variables
+	- page.type = 'page';
+	- page.title = 'Промо';
+	- jumbotron_video_name = 'Scratch-that';
+
+
+block main
+	include parts/_jumbotron
+	.container
+		include components/_breadcrumbs
+		include components/_content
+		include components/_content

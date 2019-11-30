@@ -1,0 +1,20 @@
+//-
+	Главная странциа
+	Секция "Преподаватели"
+
+
+mixin teacher( args )
+	.col-xs-12.col-sm-8.col-md-4.col-lg-4
+		a.teachers__entry.entry( href="#" )
+			img.wp-post-thumbnail.lazy( src="#", data-src=args.foto )
+			h3.title #{args.name}
+			p.excerpt #{args.description}
+
+
+
+section.teachers.section#teachers: .container
+	h2 Преподаватели
+	.row
+		+teacher({ foto: src.img+'teachers/01-thumbnail.jpg', name: 'Иванов Иван', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod		tempor incididunt ut labore et dolore magna aliqua.' })
+		+teacher({ foto: src.img+'teachers/02-thumbnail.jpg', name: 'Сидоров Сидор', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod		tempor incididunt ut labore et dolore magna aliqua.' })
+		+teacher({ foto: src.img+'teachers/03-thumbnail.jpg', name: 'Петров Пётр', description: 'Lorem ipsum dolor sit amet, sed do eiusmod		tempor incididunt ut labore et dolore magna aliqua.' })

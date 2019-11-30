@@ -1,0 +1,39 @@
+//-
+//- Главная страница
+//- Секция "Оборудование"
+//-
+
+
+.equipment {
+
+
+	.entry {
+		display: block;
+		padding: 5px;
+		background-color: transparent;
+		text-decoration: none;
+		margin-top: $flexboxgrid-outer-margin;
+		margin-bottom: $flexboxgrid-outer-margin;
+		height: inherit;
+		&:hover .thumbnail:after { @extend %foto-zoom-hover; }
+	}
+
+
+	&__entry {
+		.thumbnail {
+			display: block;
+			margin: 0.5em auto;
+			position: relative;
+			img { display: block; }
+			&:after { @extend %foto-zoom; }
+		}
+		.title {
+			font-weight: normal;
+			text-align: center;
+			color: $text-color;
+			font-size: 85%;
+		}
+	}
+	
+	
+}

@@ -1,0 +1,28 @@
+//-
+	Главная страница
+	Секция оборудование
+
+
+
+mixin equipment_entry( args )
+	.col-xs-6.col-sm-4.col-md-4.col-lg-4
+		a.equipment__entry.entry( href=args.foto data-fancybox="equipment" )
+			.thumbnail: img.lazy( src="#", data-src=args.thumbnail, alt=args.title )
+			.title #{args.title}
+
+
+section.section.equipment.lazy#equipment
+	.container
+		h2 Оборудование
+		.row
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p.text-center: a( href="#" ).btn.btn-primary Подробней
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6.first-sm: .row
+				+equipment_entry( { title: 'Оборудование 1', thumbnail: src.img+'equipment/01-medium.jpg', foto: src.img+'equipment/01-large.jpg' } )
+				+equipment_entry( { title: 'Оборудование 2', thumbnail: src.img+'equipment/02-medium.jpg', foto: src.img+'equipment/02-large.jpg' } )
+				+equipment_entry( { title: 'Оборудование 3', thumbnail: src.img+'equipment/03-medium.jpg', foto: src.img+'equipment/03-large.jpg' } )
+				+equipment_entry( { title: 'Оборудование 4', thumbnail: src.img+'equipment/04-medium.jpg', foto: src.img+'equipment/04-large.jpg' } )
+				+equipment_entry( { title: 'Оборудование 5', thumbnail: src.img+'equipment/05-medium.jpg', foto: src.img+'equipment/05-large.jpg' } )
+				+equipment_entry( { title: 'Оборудование 6', thumbnail: src.img+'equipment/06-medium.jpg', foto: src.img+'equipment/06-large.jpg' } )

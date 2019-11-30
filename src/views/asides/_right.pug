@@ -1,0 +1,35 @@
+//-
+	Правый сайдбар
+
+
+
+mixin side_right_widget( title )
+	.col-xs-12.col-sm-4.col-md-12.col-lg-12: .widget
+		h3.title #{title}
+		block
+
+
+
+aside.aside.aside--right: .row
+	.col-xs-12.col-sm-4.col-md-12.col-lg-12
+		+side_right_widget( 'Новости' )
+			ul
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+		+side_right_widget( 'Последние мероприятия' )
+			ul
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+		+side_right_widget( 'Анонсы' )
+			ul
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия
+				li: a( href="#" ) Название мероприятия

@@ -1,0 +1,84 @@
+//-
+//- Стили элементов формы
+//-
+
+
+%form-group-control {
+	display: inline-block;
+	border: 1px solid #b4b9be;
+	background-color: #fff;
+	cursor: pointer;
+	outline: 0;
+	padding: 0;
+	vertical-align: middle;
+	width: 1em;
+	height: 1em;
+	appearance: none;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+
+form {
+
+	textarea,
+	input[type=text],
+	input[type=email] {
+		display: block;
+		padding: 5px 10px;
+		margin: 0;
+		border: 1px solid $brand-success;
+		width: 100%;
+		// border-radius: 3px;
+		background-color: #fff;
+		box-sizing: border-box;
+		// box-shadow: 0px 0px 10px rgba( 0, 0, 0, 0.3 );
+	}
+	label {
+		display: block;
+		font-weight: bold;
+		margin-top: 10px;
+		cursor: pointer;
+	}
+
+	[type=submit] {
+		@extend %button;
+		@extend %button-success;
+		display: block;
+		margin: 10px auto;
+	}
+
+	fieldset {
+		padding: 0.5em;
+		margin: 1em auto;
+		position: relative;
+		legend {
+			position: absolute;
+			top: -1em;
+			left: 1em;
+			// font-weight: ;
+			background-color: $body-color;
+			display: block;
+			padding: 0 0.5em;
+			font-size: 85%;
+		}
+	}
+
+	[type=checkbox] {
+		@extend %form-group-control;
+		background-position: center center;
+		background-size: .7em .7em;
+		background-repeat: no-repeat;
+		&:checked {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ0Mi41MzMgNDQyLjUzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQyLjUzMyA0NDIuNTMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8cGF0aCBkPSJNNDM0LjUzOSw5OC40OTlsLTM4LjgyOC0zOC44MjhjLTUuMzI0LTUuMzI4LTExLjc5OS03Ljk5My0xOS40MS03Ljk5M2MtNy42MTgsMC0xNC4wOTMsMi42NjUtMTkuNDE3LDcuOTkzTDE2OS41OSwyNDcuMjQ4ICAgbC04My45MzktODQuMjI1Yy01LjMzLTUuMzMtMTEuODAxLTcuOTkyLTE5LjQxMi03Ljk5MmMtNy42MTYsMC0xNC4wODcsMi42NjItMTkuNDE3LDcuOTkyTDcuOTk0LDIwMS44NTIgICBDMi42NjQsMjA3LjE4MSwwLDIxMy42NTQsMCwyMjEuMjY5YzAsNy42MDksMi42NjQsMTQuMDg4LDcuOTk0LDE5LjQxNmwxMDMuMzUxLDEwMy4zNDlsMzguODMxLDM4LjgyOCAgIGM1LjMyNyw1LjMzMiwxMS44LDcuOTk0LDE5LjQxNCw3Ljk5NGM3LjYxMSwwLDE0LjA4NC0yLjY2OSwxOS40MTQtNy45OTRsMzguODMtMzguODI4TDQzNC41MzksMTM3LjMzICAgYzUuMzI1LTUuMzMsNy45OTQtMTEuODAyLDcuOTk0LTE5LjQxN0M0NDIuNTM3LDExMC4zMDIsNDM5Ljg2NCwxMDMuODI5LDQzNC41MzksOTguNDk5eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojMEM0MjZGIiBkYXRhLW9sZF9jb2xvcj0iIzBjNDI2ZiI+PC9wYXRoPgo8L2c+PC9nPiA8L3N2Zz4=);
+		}
+	}
+
+	[type=radio] {
+		@extend %form-group-control;
+		border-radius: 50%;
+		&:checked {
+			background-image: radial-gradient( circle closest-side, #0c426f 60%, transparent 61% );
+		}
+	}
+	
+}

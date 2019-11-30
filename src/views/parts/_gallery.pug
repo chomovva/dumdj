@@ -1,0 +1,23 @@
+//-
+	Секция "Галерея"
+
+
+mixin gallery_entry( args )
+	.col-xs-6.col-sm-4.col-md-3.col-lg-2
+		a.gallery__item.item.fancybox( href=args.large data-fancybox="gallery" ): img( src=args.thumbnail, alt="Галерея" )
+
+
+//- section.gallery#gallery( data-parallax="scroll" data-image-src=src.img+'gallery/bg.jpg' ): .container-fluid: .row.center-xs
+section.gallery#gallery: .container-fluid: .row.center-xs
+	+gallery_entry({ thumbnail: src.img+'gallery/01-medium.jpg', large: src.img+'gallery/01-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/02-medium.jpg', large: src.img+'gallery/02-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/03-medium.jpg', large: src.img+'gallery/03-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/04-medium.jpg', large: src.img+'gallery/04-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/05-medium.jpg', large: src.img+'gallery/05-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/06-medium.jpg', large: src.img+'gallery/06-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/07-medium.jpg', large: src.img+'gallery/07-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/08-medium.jpg', large: src.img+'gallery/08-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/01-medium.jpg', large: src.img+'gallery/01-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/02-medium.jpg', large: src.img+'gallery/02-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/03-medium.jpg', large: src.img+'gallery/03-large.jpg' })
+	+gallery_entry({ thumbnail: src.img+'gallery/04-medium.jpg', large: src.img+'gallery/04-large.jpg' })

@@ -1,0 +1,23 @@
+
+
+
+
+mixin entry_icon( args )
+	.col-xs-6.col-sm-3.col-md-3.col-lg-2
+		a.entry--icon( href="#" )
+			.entry__thumbnail.thumbnail: img.lazy( src="#" data-src=args.thumbnail alt=args.title )
+			h3.entry__title.title #{args.title}
+
+
+section.section
+
+	h2 Иконочное меню
+
+	.row.center-xs
+		+entry_icon( { title: 'Иконка 1', thumbnail: src.img+'icons/dj.png' } )
+		+entry_icon( { title: 'Иконка 2', thumbnail: src.img+'icons/music.png' } )
+		+entry_icon( { title: 'Иконка 3', thumbnail: src.img+'icons/vinyl.png' } )
+		+entry_icon( { title: 'Иконка 4', thumbnail: src.img+'icons/disco-ball.png' } )
+		+entry_icon( { title: 'Иконка 5', thumbnail: src.img+'icons/dj-mixer.png' } )
+		+entry_icon( { title: 'Иконка 6', thumbnail: src.img+'icons/sliders.png' } )
+

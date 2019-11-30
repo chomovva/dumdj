@@ -1,0 +1,43 @@
+//
+// Иконки соц сетей
+//
+//
+
+
+.social {
+	padding: 0;
+	a {
+		display: block;
+		background-color: transparent;
+		border: 1px solid transparent;
+		width: 2em;
+		height: 2em;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 1em 1em;
+		text-decoration: none;
+		transition: background-color 250ms;
+		&:hover {
+			text-decoration: none;
+			border: 1px solid $brand-primary;
+		}
+	}
+	li {
+		display: inline-block;
+		margin: 0px 3px;
+	}
+	.facebook { @extend %icon-facebook; }
+	.facebook:hover { @extend %icon-facebook-hover; }
+
+	.twitter { @extend %icon-twitter; }
+	.twitter:hover { @extend %icon-twitter-hover; }
+
+	.instagram { @extend %icon-instagram; }
+	.instagram:hover { @extend %icon-instagram-hover; }
+
+	.youtube { @extend %icon-youtube; }
+	.youtube:hover { @extend %icon-youtube-hover; }
+
+	.vk { @extend %icon-vk; }
+	.vk:hover { @extend %icon-vk-hover; }
+}

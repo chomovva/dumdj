@@ -1,0 +1,86 @@
+//-
+//-
+//-
+
+
+
+
+.slider {
+
+	position: relative;
+
+	&__arrow {
+		@extend %xy-center;
+		@extend %box-shadow;
+		position: absolute;
+		width: 3em;
+		height: 3em;
+		border: none;
+		background-color: $brand-primary;
+		cursor: pointer;
+		// border-radius: 50%;
+		top: 50%;
+		margin-top: -1em;
+		padding: 0;
+		&:before {
+			@extend %background-icon;
+			@extend %icon-arrow;
+			content: '';
+			width: 1em;
+			height: 1em;
+			flex-shrink: 0;
+			transform-origin: center center;
+		}
+	}
+
+
+	.arrow {
+		&--prev {
+			left: 0%;
+			margin-left: 2em;
+			&:before { transform: rotate( 0deg ); }
+		}
+		&--next {
+			right: 0%;
+			margin-right: 2em;
+			&:before { transform: rotate( 180deg ); }
+		}
+	}
+
+
+	&__dots {
+		display: block;
+		margin: 15px auto;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+	}
+
+
+	.dots {
+		li {
+			display: inline-block;
+			margin: 5px;
+		}
+		button {
+			display: block;
+			width: 2em;
+			height: 2em;
+			cursor: pointer;
+			// border-radius: 50%;
+			background-color: lighten( $brand-default, 35% );
+			transition: background-color 250ms;
+			padding: 0;
+			margin: 0;
+			border: none;
+			font-size: 0.7em;
+			line-height: 1em;
+			color: #fff;
+			&:hover { background-color: $brand-primary; }
+		}
+		.slick-active button { background-color: $brand-primary; }
+	}
+
+
+
+}

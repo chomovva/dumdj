@@ -1,0 +1,22 @@
+
+
+
+mixin entry_flat( args )
+	.col-xs-12.col-sm-6.col-md-4.col-lg-4
+		a.entry--flat( href="#" )
+			img.entry__thumbnail.thumbnail.lazy( src="#" data-src=args.thumbnail alt=args.title )
+			.side.side--front: h3.entry__title.title #{args.title}
+			.side.side--back: p.entry__excerpt.excerpt #{args.excerpt}
+
+
+section.section
+
+	h2 Меню в виде "флат"-списка
+
+	.row.center-xs
+		+entry_flat( { title: 'Onsectetur adipisicing elit ', thumbnail: src.img+'gallery/01-medium.jpg', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit umquam odio nihil aliquamlo!' } )
+		+entry_flat( { title: 'Met, elit audant', thumbnail: src.img+'gallery/02-medium.jpg', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit ui molestias ea hicat!' } )
+		+entry_flat( { title: 'Lorem ipsum dolor sit amet', thumbnail: src.img+'gallery/03-medium.jpg', excerpt: 'Lorem ipsum dolor sit amet, elit audantium quia quisquam mem.' } )
+		+entry_flat( { title: 'Onsectetur adipisicing elit ', thumbnail: src.img+'gallery/04-medium.jpg', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit umquam odio nihil aliquamlo!' } )
+		+entry_flat( { title: 'Met, elit audant', thumbnail: src.img+'gallery/05-medium.jpg', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit ui molestias ea hicat!' } )
+		+entry_flat( { title: 'Lorem ipsum dolor sit amet', thumbnail: src.img+'gallery/06-medium.jpg', excerpt: 'Lorem ipsum dolor sit amet, elit audantium quia quisquam mem.' } )

@@ -1,0 +1,32 @@
+//-
+
+
+
+mixin comment( args )
+	li.comments__entry.entry
+		a.foto( href="#" )
+			if args.foto
+				img.lazy( src=args.foto alt=args.name )
+		.title
+			h4.name #{args.name}
+			time.time( datetime="1957-10-04" ) 1957-10-04
+		.message Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores mollitia vitae animi obcaecati optio, nam repellendus maxime id. At sapiente repellat numquam recusandae voluptates vel quis amet distinctio nam odit.
+		.buttons
+			a.answer.fancybox( href="#comments-form" role="button" ) Ответить
+		if block
+			ul.list-unstyled
+				block
+
+
+.comments#comments
+	h2 Коментарии
+	p.small Всего 10
+	.text-center: a.btn.btn-success.fancybox( href="#comments-form" role="button" ) Оставить комментарий	
+	.comments__modal.modal#comments-form( style="display: none;" ): include ../forms/_comments
+	ul.list-unstyled
+		+comment( { name: 'Иванов Иван' } )
+		+comment( { name: 'Иванов Иван', foto: src.img+'reviews/01.jpg' } )
+		+comment( { name: 'Иванов Иван', foto: src.img+'reviews/02.jpg' } )
+			+comment( { name: 'Иванов Иван', foto: src.img+'reviews/03.jpg' } )
+			+comment( { name: 'Иванов Иван', foto: src.img+'reviews/04.jpg' } )
+		+comment( { name: 'Иванов Иван', foto: src.img+'reviews/05.jpg' } )

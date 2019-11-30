@@ -1,0 +1,19 @@
+//-
+//-
+//-
+
+
+
+.section {
+
+	padding: 4em 0;
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	&:nth-of-type( odd ) {
+		background-color: #fff;
+	}
+
+}

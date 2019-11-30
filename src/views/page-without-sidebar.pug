@@ -1,0 +1,14 @@
+extend layout/_index
+
+
+block variables
+	- page.type = 'single';
+	- page.title = 'Шаблон страницы без правой колонки';
+
+
+block main
+	.container
+		include components/_pageheader
+		include components/_breadcrumbs
+		include components/_content
+		include components/_pager

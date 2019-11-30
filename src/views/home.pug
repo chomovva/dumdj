@@ -1,0 +1,18 @@
+extend layout/_index
+
+
+block variables
+	- page.type = 'front-page';
+	- page.title = 'Главная';
+	- jumbotron_video_name = 'Live-Music';
+
+
+block main
+	include parts/_jumbotron
+	include parts/_cources
+	include parts/_gallery
+	include parts/_teachers
+	include parts/_progress
+	include parts/_equipment
+	include parts/_reviews
+	include parts/_contacts

@@ -1,0 +1,48 @@
+//
+//
+//
+//
+
+
+
+
+.pagination {
+
+	margin: 4em auto;
+	text-align: center;
+
+	.screen-reader-text {
+		display: none;
+	}
+
+	.page-numbers {
+		display: inline-block;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
+		vertical-align: middle;
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+
+	.current {
+		background-color: transparent;
+		color: $brand-primary;
+		border: 1px solid $brand-primary;
+	}
+
+	a {
+		text-decoration: none;
+		color: #fff;
+		background-color: $brand-primary;
+		transition: background-color 200ms, color 200ms, border-color 200ms;
+		border: 1px solid $brand-primary;
+		&:hover {
+			text-decoration: none;
+			border: 1px solid $brand-primary;
+			background-color: lighten( $brand-primary, 10% );
+			color: #fff;
+		}
+	}
+
+}

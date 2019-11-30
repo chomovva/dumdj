@@ -1,0 +1,61 @@
+//-
+//- Главнвя страница
+//- Секция "Контакты"
+
+
+
+.contacts {
+
+	box-shadow: 0 0 1em rgba( 0, 0, 0, 0.5 ) inset;
+
+	h2 {
+		color: #fff;
+	}
+
+	.wrap {
+		position: relative;
+		z-index: 0;
+		background-color: #fff;
+		box-shadow: 0px 0px 1em rgba( 0, 0, 0, 0.3 );
+		margin: 2em auto;
+		padding: 1em;
+	}
+	
+	.list {
+		list-style-type: none;
+		// border: 1px solid $brand-success;
+	}
+
+	&__list {
+
+		li {
+			margin: 1em auto;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		li:before {
+			@extend %background-icon;
+			content: '';
+			width: 1.5em;
+			height: 1.5em;
+			margin-right: 1em;
+		}
+
+		.phone:before { @extend %icon-phone; }
+
+		.email:before { @extend %icon-email; }
+
+		.address:before { @extend %icon-address; }
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	}
+
+}

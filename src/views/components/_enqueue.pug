@@ -1,0 +1,78 @@
+//-
+	Подсключение стилей и скриптов
+
+
+//- link( href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,800&display=swap&subset=cyrillic-ext", rel="stylesheet" )
+//- 
+
+link( rel="stylesheet", href=src.css+"main.css" )
+script( src=src.js+"jquery.js" )
+
+
+// подключение шрифтов
+link( rel="stylesheet", href=src.css+"fonts.css" )
+
+
+// меню, кнопка "наверх", шапка ...
+script( src=src.js+"main.js" )
+
+
+// фоновое видео
+link( rel="stylesheet", href=src.css+"jquery.background-video.css" )
+script( src=src.js+"jquery.background-video.js" )
+script.
+	jQuery( '.bg-video' ).bgVideo();
+
+
+// ленивая загрузка изображений
+script( src=src.js+"lazyload.js" )
+script.
+	jQuery( document ).ready( function () {
+		jQuery( ".lazy" ).lazy();
+	} );
+
+
+// паралакс
+//- script( src=src.js+"parallax.js" )
+//- script.
+//- 	jQuery( document ).ready( function () {
+//- 		jQuery( "#gallery" ).parallax();
+//- 		jQuery( "#equipment" ).parallax();
+//- 	} );
+
+
+// адаптивные видео-фреймы
+script( src=src.js+"superembed.js" )
+
+link( rel="stylesheet", type="text/css", href=src.css+'slick.css' )
+script( src=src.js+'slick.js' )
+script.
+	jQuery( '#reviews-list' ).slick({
+		dots: true,
+		dotsClass: 'slider__dots dots',
+		prevArrow: jQuery( '#reviews .arrow--prev' ),
+		nextArrow: jQuery( '#reviews .arrow--next' ),
+		appendDots: jQuery( '#reviews' ),
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		lazyLoad: 'ondemand',
+		responsive: [
+			{
+				breakpoint: 980,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			},
+		]
+	});
+
+
+link( rel="stylesheet", type="text/css", href=src.css+'fancybox.css' )
+script( src=src.js+'fancybox.js' )
+script.
+	jQuery( '.fancybox' ).fancybox();
+	jQuery( '#contacts-form-toggle' ).fancybox();
+	jQuery( 'a.equipment__entry.entry' ).fancybox();

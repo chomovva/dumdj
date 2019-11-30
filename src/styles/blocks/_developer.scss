@@ -1,0 +1,23 @@
+//
+//
+//
+
+
+
+
+.developer {
+
+	.logo {
+		@extend %brand-logo;
+	}
+
+	&__logo path {
+		fill: $brand-primary;
+	}
+
+	.name {
+		@extend %brand-name;
+		&:hover { text-decoration: none; }
+	}
+
+}

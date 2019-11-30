@@ -1,0 +1,32 @@
+%button {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.75em 2em;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0px 10px 20px rgba( 0, 0, 0, 0.1 );
+	min-width: 100px;
+	transition: box-shadow 250ms, background-color 250ms;
+	&:hover {
+		text-decoration: none;
+		box-shadow: 0px 10px 30px rgba( 0, 0, 0, 0.2 );
+	}
+}
+
+%button-default {
+	background-color: #fff;
+	color: $text-color;
+	border: 1px solid lighten( $brand-default, 40% );
+}
+%button-primary {
+	background-color: $brand-primary;
+	border: 1px solid lighten( $brand-primary, 40% );
+	color: #fff;
+}
+%button-success {
+	background-color: $brand-success;
+	border: 1px solid lighten( $brand-success, 40% );
+	color: #fff;
+}

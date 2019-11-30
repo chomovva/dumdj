@@ -1,0 +1,54 @@
+//-
+//- Главная страниц
+//- первый экран
+//-
+
+
+.jumbotron {
+
+	padding: 10em 0;
+	text-align: center;
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.5 ) inset;
+	background-blend-mode: luminosity;
+	color: #fff;
+	transition: background-color 3s;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.wrap {
+		position: relative;
+		z-index: 100;
+	}
+
+	.title {
+		max-width: 768px;
+		margin: 5px auto;
+		font-size: 4em;
+		text-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.7 );
+	}
+
+	.subtitle {
+		text-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.7 );
+		max-width: 768px;
+		margin: 5px auto;
+	}
+
+	.permalink {
+		@extend %button;
+		@extend %button-primary;
+		margin: 20px auto;
+	}
+
+	.bgi {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		z-index: -1;
+	}
+
+}

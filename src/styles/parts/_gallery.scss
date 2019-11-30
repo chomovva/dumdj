@@ -1,0 +1,33 @@
+//-
+//-
+//-
+
+
+
+
+.gallery {
+
+	padding: $flexboxgrid-outer-margin/2 0;
+
+	.item {
+		@extend %box-shadow;
+		display: block;
+		margin: $flexboxgrid-outer-margin/2 0;
+		position: relative;
+	}
+	.item:hover:after {
+		@extend %foto-zoom-hover;
+	}
+	.item:after {
+		@extend %foto-zoom;
+	}
+
+	&__item {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+}

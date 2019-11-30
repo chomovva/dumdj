@@ -1,0 +1,67 @@
+//-
+//- Мобильное меню
+//-
+
+
+
+.mobilenav {
+
+	// @extend %xy-center;
+	padding: 25px 0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba( 0, 0, 0, 0.8 );
+	text-align: center;
+	z-index: 1000;
+	opacity: 0;
+	pointer-events: none;
+	transform: scale( 0.5 );
+	transform-origin: center center;
+	transition: transform 250ms, opacity 250ms;
+
+	.close {
+		@extend %background-icon;
+		@extend %icon-close;
+		display: inline-block;
+		// position: absolute;
+		// top: 50px;
+		// right: 50px;
+		width: 4em;
+		height: 4em;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	.list {
+		list-style: none;
+		min-width: 75%;
+		margin: 25px 0;
+		padding: 0;
+	}
+
+	a {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		padding: 0.5em;
+		background-color: transparent;
+		transition: background-color 250ms;
+		font-size: 1.5em;
+		&:hover {
+			background-color: $brand-success;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+		transform: scale( 1.0 );
+	}
+
+}

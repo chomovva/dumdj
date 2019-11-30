@@ -1,0 +1,49 @@
+//
+//	Шапка сайта
+//
+//
+
+
+
+.header {
+
+	box-shadow: 0 0 1em rgba( 0, 0, 0, 0.2 );
+	border-bottom: 1px solid $border-color;
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__bloginfo {
+		float: left;
+		margin: 0;
+	}
+
+	&__nav {
+		display: none;
+		@include min-width( $screen-lg ) { display: block; }
+	}
+
+
+	&__burger {
+		@extend %xy-center;
+		width: 4em;
+		height: 4em;
+		border: none;
+		margin: 0;
+		padding: 0;
+		background-color: transparentize( $brand-default, 0.5 );
+		display: block;
+		@include min-width( $screen-lg ) { display: none; }
+	}
+
+	.burger svg {
+		width: 1em;
+		height: 1em;
+	}
+
+
+}

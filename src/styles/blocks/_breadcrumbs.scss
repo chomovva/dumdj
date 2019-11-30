@@ -1,0 +1,31 @@
+//
+// Хлубные крошки
+//
+//
+
+
+
+.breadcrumbs {
+
+	font-size: 85%;
+	margin: 1em 0;
+
+	&:before {
+		@extend %background-icon;
+		@extend %icon-home;
+		content: '';
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		margin-right: 0.5em;
+		vertical-align: -1px;
+	}
+
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}

@@ -1,0 +1,46 @@
+//-
+	Главаня сраница
+	Слайдер "Отзывы родителей"
+
+
+
+//- mixin review( args )
+//- 	.reviews__entry.entry: .container
+//- 		img.wp-post-thumbnail( src="#", data-lazy=args.foto, alt=args.title )
+//- 		h3.title #{args.title}
+//- 		blockquote.blockquote: p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+mixin review( args )
+	.reviews__entry.entry
+		img.wp-post-thumbnail( src="#", data-lazy=args.foto, alt=args.title )
+		h3.title #{args.title}
+		blockquote.blockquote: p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+//- section.section.reviews#reviews.slider
+//- 	h2 Отзывы родителей
+//- 	.slider__list.list#reviews-list
+//- 		+review({ foto: src.img+'reviews/01.jpg', title: 'Иванов Иван' })
+//- 		+review({ foto: src.img+'reviews/02.jpg', title: 'Иванов Иван' })
+//- 		+review({ foto: src.img+'reviews/03.jpg', title: 'Иванов Иван' })
+//- 		+review({ foto: src.img+'reviews/04.jpg', title: 'Иванов Иван' })
+//- 		+review({ foto: src.img+'reviews/05.jpg', title: 'Иванов Иван' })
+//- 	button.slider__arrow.arrow.arrow--prev: .sr-only Предыдущий слайд
+//- 	button.slider__arrow.arrow.arrow--next: .sr-only Следующий слайд
+
+
+
+
+
+section.section.reviews#reviews.slider: .container
+	h2 Отзывы
+	.slider__list.list#reviews-list
+		+review({ foto: src.img+'reviews/01.jpg', title: 'Иванов Иван' })
+		+review({ foto: src.img+'reviews/02.jpg', title: 'Иванов Иван' })
+		+review({ foto: src.img+'reviews/03.jpg', title: 'Иванов Иван' })
+		+review({ foto: src.img+'reviews/04.jpg', title: 'Иванов Иван' })
+		+review({ foto: src.img+'reviews/05.jpg', title: 'Иванов Иван' })
+	button.slider__arrow.arrow.arrow--prev: .sr-only Предыдущий слайд
+	button.slider__arrow.arrow.arrow--next: .sr-only Следующий слайд

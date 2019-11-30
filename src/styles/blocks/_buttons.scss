@@ -1,0 +1,10 @@
+//-
+//- Стили кнопок
+//-
+
+
+
+.btn { @extend %button; }
+.btn-default { @extend %button-default; }
+.btn-primary { @extend %button-primary; }
+.btn-success { @extend %button-success; }

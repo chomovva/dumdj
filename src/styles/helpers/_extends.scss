@@ -1,0 +1,114 @@
+%list-unstyled { @include list-unstyled; }
+
+%list-inline { @include list-inline; }
+
+%xy-center { @include xy-center; }
+
+%center-block { @include center-block; }
+
+%link-unstyled {
+	@include td ( inherit, inherit );
+	@include color ( inherit, inherit, inherit, inherit );
+}
+
+%clearfix { @include clearfix; }
+
+%text-overflow { @include text-overflow; }
+
+%dl-horizontal { @include dl-horizontal; }
+
+
+
+//-
+
+
+
+
+
+
+
+
+//- цитата
+%quotes {
+	@extend %background-icon;
+	display: block;
+	width: 1em;
+	height: 1em;
+	position: absolute;
+}
+
+%quote-left {
+	@extend %quotes;
+	@extend %icon-quote-left;
+	top: 0;
+	left: 0;
+}
+
+%quote-right {
+	@extend %quotes;
+	@extend %icon-quote-right;
+	right: 0;
+	bottom: 0;
+}
+
+
+
+//////////
+
+
+%box-shadow {
+	box-shadow: 0 1em 2em rgba( 0, 0, 0, 0.2 );
+}
+
+
+///////////
+
+%brand-logo {
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.5em;
+	padding: 0.2em;
+}
+
+%brand-name {
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	vertical-align: middle;
+	color: $text-color;
+	&:hover { color: $text-color; }
+	&:first-letter { color: $brand-primary; }
+}
+
+
+
+////////////////
+
+
+%foto-zoom {
+	@extend %icon-zoom-plus;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: transparentize( $brand-primary, 0.3 );
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 2em 2em;
+	transition: opacity 200ms, transform 200ms;
+	opacity: 0;
+	transform-origin: center center;
+	transform: scale( 0.7 );
+	background-blend-mode: luminosity;
+}
+
+%foto-zoom-hover {
+	opacity: 1;
+	transform: scale( 1.0 );
+}

@@ -1,0 +1,51 @@
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/flex";
+@import "helpers/mixins";
+@import "helpers/extends.icons";
+@import "helpers/extends.buttons";
+@import "helpers/extends";
+
+
+@import "base/normalize";
+@import "base/type";
+
+
+@import "blocks/wrapper";
+@import "blocks/flexboxgrid";
+@import "blocks/section";
+@import "blocks/nav";
+@import "blocks/buttons";
+@import "blocks/slider";
+@import "blocks/form";
+@import "blocks/mobilenav";
+@import "blocks/pageheader";
+@import "blocks/pager";
+@import "blocks/pagination";
+@import "blocks/person";
+@import "blocks/social";
+@import "blocks/breadcrumbs";
+@import "blocks/to-top-button";
+@import "blocks/bloginfo";
+@import "blocks/developer";
+@import "blocks/widget";
+@import "blocks/comments";
+@import "blocks/entry";
+
+
+
+//
+@import "parts/header";                 // Шапка сайта
+@import "parts/jumbotron";              // Первый экран
+@import "parts/cources";                // Главная странциа - секция "Курсы"
+@import "parts/gallery";                // Главная странциа - секция "Галерея"
+@import "parts/teachers";               // Главная странциа - секция "Учителя"
+@import "parts/progress";               // Главная страница - секция "Достижения"
+@import "parts/equipment";              // Главная странциа - секция "Оборудование"
+@import "parts/reviews";                // Главная странциа - секция "Отзывы"
+@import "parts/contacts";               // Главная странциа - секция "Контакты"
+@import "parts/aside";
+@import "parts/footer";                 // Подвал сайта
+
+
+@import "pages/archive";

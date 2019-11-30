@@ -1,0 +1,17 @@
+//-
+	Главная страница
+	"Контакты"
+
+
+
+section.section.contacts.lazy#contacts( data-src=src.img+'contacts/bg.jpg' )
+	h2 Контакты
+	.container: .row.middle-xs.center-xs
+		.col-xs-12.col-sm-9.col-md-8.col-lg-5: .wrap
+			ul.contacts__list.list
+				li.phone #[span.sr-only Телефон] #[a( href="tel:380671591617" ) +38 (067) 159-16-17]
+				li.email #[span.sr-only Email] #[a( href="mailto:chomovva@gmail.com" ) chomovva@gmail.com]
+				li.address #[span.sr-only Адрес] #[a( href="#" ) город Мариуполь, улица Пушкина, дом]
+			.text-center
+				a.btn.btn-primary#contacts-form-toggle( role="button", href="#contacts-form-modal" ) Напишите нам
+				#contacts-form-modal( style="display: none; min-width: 300px;" ): include ../forms/_contacts

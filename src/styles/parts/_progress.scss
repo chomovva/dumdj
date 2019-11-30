@@ -1,0 +1,40 @@
+//
+// Главная страница
+// Секиця "Достижения"
+//
+
+
+
+
+
+.progress {
+
+	text-shadow: 1px 1px 3px #555;
+
+	h2 {
+		color: #fff;
+	}
+
+	.item {
+		margin: 2em auto;
+		text-align: center;
+		color: #fff;
+	}
+
+
+	&__item {
+		.percent {
+			@extend %xy-center;
+			border: 3px solid #fff;
+			border-radius: 50%;
+			width: 3em;
+			height: 3em;
+			font-size: 2em;
+			margin: 0.5em auto;
+		}
+		.title {
+			font-weight: bold;
+		}
+	}
+
+}

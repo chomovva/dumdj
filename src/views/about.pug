@@ -1,0 +1,30 @@
+extend layout/_index
+
+block variables
+	- page.type = 'single';
+	- page.title = 'О нас';
+
+
+block main
+	.container
+		include components/_pageheader
+		include components/_breadcrumbs
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste impedit, porro animi eligendi earum quas quibusdam sed, dicta voluptatibus et nam, itaque minima? Natus delectus, adipisci aut rerum minima iste.
+		p Cumque eum earum, tempora non, corporis sapiente maiores laborum inventore fugiat nihil. Ipsam, assumenda id fugiat minus illo nulla repellendus aut saepe libero delectus officiis veniam, in sint. Ad, omnis.
+		p Quae sapiente deleniti quibusdam unde numquam maiores reiciendis, ipsam accusantium molestias veritatis suscipit labore sit nemo tempore commodi. Explicabo corporis sed, aliquam labore odio incidunt voluptatibus alias perspiciatis officia ducimus.
+		h2 Наши преподаватели
+		+person( { foto: src.img+'teachers/01-thumbnail.jpg', thumbnail: src.img+'teachers/01-large.jpg', name: 'Иванов Иван' } )
+		+person( { foto: src.img+'teachers/02-thumbnail.jpg', thumbnail: src.img+'teachers/02-large.jpg', name: 'Сидоров Сидор' } )
+		+person( { foto: src.img+'teachers/03-thumbnail.jpg', thumbnail: src.img+'teachers/03-large.jpg', name: 'Петров Пётр' } )
+		h2 Контакты
+		.row
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6: iframe( src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10994.195383761826!2d37.54364239784287!3d47.090865525457!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e466e76d2aa5%3A0xcde1c909d45551e2!2z0JzQsNGA0LjRg9C_0L7Qu9GM0YHQutC40Lkg0YXRg9C00L7QttC10YHRgtCy0LXQvdC90YvQuSDQvNGD0LfQtdC5INC40LzQtdC90Lgg0JrRg9C40L3QtNC20Lg!5e0!3m2!1sru!2sua!4v1562581499662!5m2!1sru!2sua", frameborder="0", allowfullscreen, style="width: 100%; height: 320px;" )
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6
+				ul.contacts__list.list
+					li.phone #[span.sr-only Телефон] #[a( href="tel:380671591617" ) +38 (067) 159-16-17]
+					li.email #[span.sr-only Email] #[a( href="mailto:chomovva@gmail.com" ) chomovva@gmail.com]
+					li.address #[span.sr-only Адрес] #[a( href="#" ) город Мариуполь, улица Пушкина, дом]
+				.text-center
+					a.btn.btn-primary#contacts-form-toggle( role="button", href="#contacts-form-modal" ) Напишите нам
+					#contacts-form-modal( style="display: none; min-width: 300px;" ): include forms/_contacts
+		include components/_pager

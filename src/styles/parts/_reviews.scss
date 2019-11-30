@@ -1,0 +1,39 @@
+//-
+//- Главная страница
+//- Секция "Отзывы"
+//-
+
+
+
+.reviews {
+
+	// box-shadow: 0 0 15px rgba( 0, 0, 0, 0.5 );
+
+	.entry {
+		text-align: center;
+		margin: 25px auto;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	&__entry {
+		.wp-post-thumbnail {
+			display: block;
+			margin: 15px auto;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		.blockquote {
+			position: relative;
+			font-style: italic;
+			margin: 15px auto;
+			padding: 0em 2em;
+		}
+		.blockquote * { margin: 0; }
+		.blockquote:before { @extend %quote-left; content: ''; }
+		.blockquote:after { @extend %quote-right; content: ''; }
+	}
+
+}
