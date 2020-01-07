@@ -17,20 +17,4 @@
 		margin: 0;
 		text-align: left;
 	}
-	.thumbnail {
-		margin: 10px 15px 10px 0;
-		flex-shrink: 0;
-		width: 150px;
-		height: 150px;
-		@include min-width( $screen-sm ) {
-			width: 100px;
-			height: 100px;
-		}
-	}
-	.thumbnail + .titles {
-		margin-left: 15px;
-	}
-	.wp-post-thumbnail {
-		display: block;
-	}
 }

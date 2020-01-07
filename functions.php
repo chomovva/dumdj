@@ -16,15 +16,16 @@ define( 'DUMDJ_THEME_SLUG', 'dumdj_theme' );
 locate_template( 'includes/enqueue.php', true );
 locate_template( 'includes/template-functions.php', true );
 
-if ( is_admin() && ! wp_doing_ajax() ) {
-    locate_template( 'includes/class-metabox-page-promo.php', true );
-    $promo_metabox = new dumdjMetaboxPagePromo();
-    $promo_metabox->run();
-}
+// if ( is_admin() && ! wp_doing_ajax() ) {
+//     locate_template( 'includes/class-metabox-page-promo.php', true );
+//     $promo_metabox = new dumdjMetaboxPagePromo();
+//     $promo_metabox->run();
+// }
 
 
 if ( is_customize_preview() ) {
     add_action( 'customize_register', function ( $wp_customize ) {
+        $slug = DUMDJ_THEME_SLUG;
         $wp_customize->add_panel(
             DUMDJ_THEME_SLUG,
             array(
@@ -44,6 +45,21 @@ if ( is_customize_preview() ) {
         include get_theme_file_path( 'customizer/contacts.php' );
     } );
 }
+
+
+
+
+function dumdj_theme_supports() {
+    add_theme_support( 'menus' );
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'custom-logo' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'automatic-feed-links' );
+    add_filter( 'widget_text', 'do_shortcode' );
+    add_post_type_support( 'page', 'excerpt' );
+    add_image_size( 'thumbnail_medium', 300, 200, true );
+}
+add_action( 'after_setup_theme', 'dumdj_theme_supports' );
 
 
 
